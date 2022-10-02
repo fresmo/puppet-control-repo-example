@@ -1,0 +1,17 @@
+---
+classes:
+  - ntp
+  - r10k
+
+
+ntp::servers:
+  - '0.de.pool.ntp.org'
+  - '1.de.pool.ntp.org'
+  - '2.de.pool.ntp.org'
+  - '3.de.pool.ntp.org'
+
+r10k::sources:
+  environments:
+          remote: 'https://github.com/fresmo/puppet-control-repo-example.git'
+          basedir: '/etc/puppetlabs/code/environments'
+          prefix: false
